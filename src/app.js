@@ -7,6 +7,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) => {
+    res.send('v.1.0.3')
+})
+
 app.post("/api/chat", async (req, res) => {
   const { mensaje, contexto } = req.body;
 
